@@ -1,7 +1,7 @@
 {
-    "name": "huangzonglong/pubsub",
-    "require": {
+	"name": "huangzonglong/pubsub",
+	"require": {
 		"monolog/monolog": "v1.0.*"
-    }
-}
+	}
+
 }
