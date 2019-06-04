@@ -1,0 +1,6 @@
+{
+    "name": "huangzonglong/pubsub",
+    "require": {
+        "monolog/monolog": "1.0.*"
+    }
+}
