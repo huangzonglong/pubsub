@@ -7,7 +7,7 @@
   "autoload": {
     "psr-4": {
       "Pubsub\\": "src",
-      "GPBMetadata\\Pubsub\\Protoc\\": "src/GPBMetadata/Pubsub/Protoc"
+      "GPBMetadata\\Proto\\": "src/GPBMetadata/Proto"
     }
   }
 }
