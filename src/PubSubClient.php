@@ -1,7 +1,9 @@
 <?php
 // GENERATED CODE -- DO NOT EDIT!
 
-namespace ;
+// Original file comments:
+// protoc --go_out=plugins=grpc:. protoc/pubsub.proto 生成代码
+namespace Pubsub;
 
 /**
  */
@@ -17,54 +19,54 @@ class PubSubClient extends \Grpc\BaseStub {
     }
 
     /**
-     * @param \SubscribeRequest $argument input argument
+     * @param \Pubsub\SubscribeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function Subscribe(\SubscribeRequest $argument,
+    public function Subscribe(\Pubsub\SubscribeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/PubSub/Subscribe',
+        return $this->_simpleRequest('/pubsub.PubSub/Subscribe',
         $argument,
-        ['\Subscription', 'decode'],
+        ['\Pubsub\Subscription', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \SubscribeRequest $argument input argument
+     * @param \Pubsub\SubscribeRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function Unsubscribe(\SubscribeRequest $argument,
+    public function Unsubscribe(\Pubsub\SubscribeRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/PubSub/Unsubscribe',
+        return $this->_simpleRequest('/pubsub.PubSub/Unsubscribe',
         $argument,
-        ['\Subscription', 'decode'],
+        ['\Pubsub\Subscription', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \Identity $argument input argument
+     * @param \Pubsub\Identity $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function Pull(\Identity $argument,
+    public function Pull(\Pubsub\Identity $argument,
       $metadata = [], $options = []) {
-        return $this->_serverStreamRequest('/PubSub/Pull',
+        return $this->_serverStreamRequest('/pubsub.PubSub/Pull',
         $argument,
-        ['\Message', 'decode'],
+        ['\Pubsub\Message', 'decode'],
         $metadata, $options);
     }
 
     /**
-     * @param \PublishRequest $argument input argument
+     * @param \Pubsub\PublishRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
      */
-    public function Publish(\PublishRequest $argument,
+    public function Publish(\Pubsub\PublishRequest $argument,
       $metadata = [], $options = []) {
-        return $this->_simpleRequest('/PubSub/Publish',
+        return $this->_simpleRequest('/pubsub.PubSub/Publish',
         $argument,
-        ['\PublishResponse', 'decode'],
+        ['\Pubsub\PublishResponse', 'decode'],
         $metadata, $options);
     }
 
