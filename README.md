@@ -1,6 +1,6 @@
 # PHP实现的grpc客户端
 
-## 安装
+## 一、安装
 
 ```powershell
 composer install huangzonglong/pubsub
@@ -10,11 +10,11 @@ composer install huangzonglong/pubsub
 
 还需要安装php的grpc扩展：<http://pecl.php.net/package/gRPC> 
 
-## demo运行
+## 二、demo运行
 
 tests目录中有测试文件test.php可以直接运行，前提是先启动服务端
 
-## 代码指引
+## 三、代码指引
 
 1、引入自动加载文件，Pubsub\PubSubClient类继承了grpc类，实现了连接grpc服务端，返回一个客户端连接对象。
 
@@ -71,7 +71,7 @@ $public->setTopic($topic);
 list($respone, $status) = $client->Publish($public)->wait();
 ```
 
-## Topic
+## 四、Topic
 
 1、topic格式说明
 
