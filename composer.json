@@ -9,7 +9,7 @@
   "autoload": {
     "psr-4": {
       "Pubsub\\": "src",
-      "GPBMetadata\\Huangzonglong\\Protoc\\": "src/GPBMetadata/Huangzonglong/Protoc"
+      "GPBMetadata\\Huangzonglong\\Protoc\\": "src/GPBMetadata/Pubsub/Protoc"
     }
   }
 }
