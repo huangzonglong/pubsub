@@ -2,7 +2,9 @@
   "name": "huangzonglong/pubsub",
   "type": "library",
   "require": {
-    "php": ">=5.5.0"
+    "php": ">=5.5.0",
+    "google/protobuf": "^3.8",
+    "grpc/grpc": "^1.19"
   },
   "autoload": {
     "psr-4": {
