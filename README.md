@@ -2,19 +2,27 @@
 
 ## 一、安装
 
+composer安装依赖包
+
 ```powershell
 composer install huangzonglong/pubsub
 ```
 
-会安装好google/protobuf、grpc/grpc包。
+安装php的grpc扩展：<http://pecl.php.net/package/gRPC> 
 
-还需要安装php的grpc扩展：<http://pecl.php.net/package/gRPC> 
+```shell
+pecl install grpc
+```
 
 ## 二、demo运行
 
 tests目录中有测试文件test.php可以直接运行，前提是先启动服务端
 
 ## 三、代码指引
+
+文件结构 是通过proto自动自动生成的，主要关注的是标红的文件，其中PubSubClient是调用服务的php客户端实现。其他的每个文件对应于proto协议文件定义的服务方法和消息类型的实现类。
+
+![1559788134942](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\1559788134942.png)
 
 1、引入自动加载文件，Pubsub\PubSubClient类继承了grpc类，实现了连接grpc服务端，返回一个客户端连接对象。
 
