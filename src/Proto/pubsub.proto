@@ -1,0 +1,41 @@
+//protoc --proto_path=./ --php_out=./ --grpc_out=./ --plugin=protoc-gen-grpc=/usr/local/bin/grpc_php_plugin ./Proto/pubsub.proto
+///usr/local/bin/grpc_php_plugin是个grpc-php插件，需要先编译生成
+syntax = "proto3";
+
+package pubsub;
+
+service PubSub {
+    rpc Subscribe(SubscribeRequest) returns (Subscription) {}
+    rpc Unsubscribe(SubscribeRequest) returns (Subscription) {}
+    rpc Pull(Identity) returns (stream Message) {}
+
+    rpc Publish(PublishRequest) returns (PublishResponse) {}
+}
+
+message Identity {
+    string clientId = 1;
+}
+
+message Message {
+    string payload = 1;
+    string dataType = 2;
+    string topic = 3;
+}
+
+message PublishRequest {
+    string topic = 1;
+    repeated Message messages = 2;
+}
+
+message PublishResponse {
+    string result = 1;
+}
+
+message SubscribeRequest {
+    Identity identity = 1;
+    Subscription subscription = 2;
+}
+
+message Subscription {
+    string topic = 1;
+}
